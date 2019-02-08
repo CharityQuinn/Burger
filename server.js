@@ -5,6 +5,7 @@ var router = express.Router();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const db = require("./config/connection");
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));

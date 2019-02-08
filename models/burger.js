@@ -8,7 +8,7 @@ $(document).ready(function() {
       burgers: $("#burger-input").val().trim()
     }
     // post this burger to db
-    $.ajaz({
+    $.ajax({
       url: "/api/burgers",
       method: "POST",
       data: burgerItem  //req.body

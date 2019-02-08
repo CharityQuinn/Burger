@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+// make public folder unknown 
 app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({defaultLayout: "main"}));

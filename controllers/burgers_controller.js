@@ -1,7 +1,7 @@
 const db = require("../config/connection");
 const exphbs = require("express-handlebars");
 
-var router = express.Router();
+
 
 module.exports = {
   // find all burgers

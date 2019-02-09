@@ -12,7 +12,8 @@ router
         console.log(err);
         return res.status(500).json(err);
       }
-      res.render("burgers", {burgerList: dbBurgers});
+      console.log(dbBurgers);
+      res.render("burgers", {burgers: dbBurgers});
     });
   });
 

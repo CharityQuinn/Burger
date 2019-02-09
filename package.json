@@ -2,7 +2,7 @@
   "name": "burger-list",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "password": "password",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

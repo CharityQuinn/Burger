@@ -2,7 +2,7 @@
   <div class="col-4">
     {{> section-title title="Burgers that have not been devoured"}}
     <ul class="list-group">
-    {{#each burgerList}}
+    {{#each burgers}}
       {{#unless devoured}}
         {{> burgers/burger status="Not devoured"}}
       {{/unless}}
@@ -21,7 +21,7 @@
   <div class="col-4">
     {{> section-title title="devoured burgers"}}
     <ul class="list-group">
-      {{#each burgerList}}
+      {{#each burgers}}
         {{#if devoured}}
           {{> burgers/burger status="devoured"}}
         {{/if}}

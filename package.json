@@ -1,25 +1,19 @@
 {
-  "name": "burgers",
+  "name": "burger-list",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "password": "password",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CharityQuinn/Burger.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CharityQuinn/Burger/issues"
-  },
-  "homepage": "https://github.com/CharityQuinn/Burger#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.16.0"
   }
-}
+  }
+

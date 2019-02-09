@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars");
 var router = express.Router();
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 const db = require("./config/connection");
 
 app.use(express.json());

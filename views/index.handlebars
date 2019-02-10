@@ -23,6 +23,7 @@
     <ul class="list-group">
       {{#each burgers}}
         {{#if devoured}}
+        <h4>{{this.burger_name}}</h4>
           {{> burgers/burger status="devoured"}}
         {{/if}}
       {{/each}}

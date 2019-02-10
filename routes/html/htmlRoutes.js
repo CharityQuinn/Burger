@@ -13,7 +13,8 @@ router
         return res.status(500).json(err);
       }
       console.log(dbBurgers);
-      res.render("burgers", {burgers: dbBurgers});
+      res.render("burgers", { burger: dbBurgers });
+      
     });
   });
 

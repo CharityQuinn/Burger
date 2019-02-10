@@ -1,12 +1,14 @@
 // Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
-
+// establish variables for access to routes files
 const routes = require("./routes/api/burgerRoutes");
 const routes2 = require("./routes/html/htmlRoutes");
-
+// make a variable to use express
 const app = express();
+// establish a port to access the app on the web
 const PORT = process.env.PORT || 3000;
+//connect with database through connection.js
 const db = require("./config/connection");
 
 app.use(express.json());
@@ -18,12 +20,12 @@ app.use(routes);
 app.use(routes2);
 // Import routes and give the server access to them.
 var routes = require("./controllers/routes.js");
-
+// establish access to the routes files 
 app.use('/', routes);
 
 
 
-
+// set up handlebars to be used
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 

@@ -16,20 +16,23 @@
     z-index: -1;
   }
   
-  .jumbotron {
+  .burgerTop {
     height: 350px;
-    color: rgb(240, 133, 133);
+    color: rgb(225, 240, 16);
     text-shadow: #444 0 1px 1px;
     background:transparent;
     width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 45px;
   }
 
   body {
-    
     width: 100%;
     height: 80%;
     width: 100%;
     top: 673px;
-    left: 673px;
-    z-index: -1;
+    /* left: 673px; */
+    /* z-index: -1; */
   }
+  

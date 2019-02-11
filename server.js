@@ -2,8 +2,8 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 // establish variables for access to routes files
-const routes = require("./routes/api/burgerRoutes");
-const routes2 = require("./routes/html/htmlRoutes");
+ const routes = require("./routes");
+// const routes2 = require("./routes/html/htmlRoutes");
 // make a variable to use express
 const app = express();
 // establish a port to access the app on the web
@@ -17,9 +17,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 //Import routes and give the server access to them
 app.use(routes);
-app.use(routes2);
-// Import routes and give the server access to them.
-var routes = require("./controllers/routes.js");
+// app.use(routes2);
+
+
 // establish access to the routes files 
 app.use('/', routes);
 

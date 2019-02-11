@@ -6,15 +6,14 @@ const burgersController = require("../../controllers/burgers_controller");
 // when user hits /api/Burgers
 router
   .route("/")
-  .get(burgersController.findAll)
-  .post(burgersController.createBurger)
+  .get(burgersController.selectAll)
+  .post(burgersController.insertOne)
 
 
 
 // when user hits /api/Burgers/:id
 router
   .route("/:id")
-  .get(burgersController.findById)
-  .put(burgersController.updateBurger)
+  .put(burgersController.updateOne)
 
 module.exports = router;

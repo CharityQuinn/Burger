@@ -3,8 +3,8 @@ const apiRoutes = require("./api");
 const htmlRoutes = require("./html");
 
 // set up endpoints
-router.use("/html", htmlRoutes);
-router.use("/api", burgerRoutes);
+router.use("/", htmlRoutes);
+router.use("/api", apiRoutes);
 
 // ship finished routes to server.js
 module.exports = router;

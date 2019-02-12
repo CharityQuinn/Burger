@@ -1,12 +1,15 @@
 $(document).ready(function() {
   //user entered a burger
-  $("#submit-button").on("click", function(e) { 
+  $("#submit-btn").on("click", function(e) { 
     e.preventDefault();
-
+    console.log("This is what the entry is " + this);
+    
+  
     //package up the burger type
     const burgerItem = {
       burgers: $("#burger-input").val().trim()
     }
+    console.log("This is burgerItem " + burgerItem);
     // post this burger to db
     $.ajax({
       url: "/api/burgers",

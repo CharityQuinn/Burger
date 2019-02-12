@@ -36,3 +36,11 @@
     /* z-index: -1; */
   }
   
+  #label {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    border-block-start-color: rgb(225, 240, 16);
+    font-style: bold;
+     
+  }

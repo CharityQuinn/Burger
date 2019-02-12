@@ -1,10 +1,10 @@
 <div class="row">
-  {{log "test"}}
-  <div class="col-4">
+  <div class="col-4"><p id="label"></p>
+    Burgers ready to be Devoured!</p>
     <ul class="list-group">
     {{#each burger}}
       {{#unless this.devoured}}  
-      <h4>{{this.burger_name}}</h4>
+      <h5>{{this.burger_name}}</h5>
       {{/unless}}
     {{/each}}
     </ul>
@@ -13,15 +13,16 @@
    <form>
       <div class="form-group">
         <input class="form-control" type="text" id="burger-input" placeholder="Name your burger here"/>
+        
         <button class="mt-1 btn btn-block btn-success" id="submit-btn">Add Burger</button>
       </div>
     </form>
   </div>
-  <div class="col-4">
+  <div class="col-4"><p id="label">Burgers Devoured!</p>
     <ul class="list-group">
       {{#each burger}}
         {{#if this.devoured}}
-        <h4>{{this.burger_name}}</h4>
+        <h5>{{this.burger_name}}</h5>
         {{/if}}
       {{/each}}
     </ul>

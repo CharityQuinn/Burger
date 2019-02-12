@@ -2,7 +2,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 // establish variables for access to routes files
- const routes = require("./routes");
+ const routes = require("./routes/index.js");
 // const routes2 = require("./routes/html/htmlRoutes");
 // make a variable to use express
 const app = express();
@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 //Import routes and give the server access to them
 app.use(routes);
-// app.use(routes2);
+
 
 
 // establish access to the routes files 

@@ -1,5 +1,6 @@
 const db = require("../config/connection");
 
+
 module.exports = {
   // find all burgers
   selectAll: function (req, res) {
@@ -14,7 +15,7 @@ module.exports = {
         res.json(dbBurgers);
       });
   },
-    // insert / create new burger item (takes in req.body via POST)
+  //insert / create new burger item (takes in req.body via POST)
   insertOne: function (req, res) {
     // req.body => {burger: "Make a burger"}
     db
@@ -25,13 +26,27 @@ module.exports = {
             .status(400)
             .json(err);
         }
+        let burgerName = dbBurgers.burger_name;
+        console.log("This is the burger name going into the db " + burgerName);
+        let burger = request.body.burger_name;
+        console.log(burger);
         res.json(dbBurgers);
       });
   },
+  // router.post("/api/burger", function (request, response) {
+  //   burger.create({
+  //     burger_name: request.body.burgerName,
+  //     devoured: (request.body.devoured) ? eval(request.body.devoured) : false
+  //   }, function (result) {
+  //     response.json({
+  //       id: result.insertId
+  //     });
+  //   });
+  // }),
   // UPDATE/PUT a burger to mark it from ready to eat to devoured (false => true),
   // this will use req.params.id to know where they're updating
   updateOne: function (req, res) {
-  
+
     db
       .query("UPDATE burgers SET devoured = true WHERE id = ?", [req.params.id], function (err, dbBurgers) {
         if (err) {
@@ -40,15 +55,12 @@ module.exports = {
             .status(400)
             .json(err);
         }
-         // set up home page (root) to load up handlebars template with burger list
+        // set up home page (root) to load up handlebars template with burger list
         dbBurgers.devoured = true;
-        res.render("burgers", {burgerList: dbBurgers});
+        res.render("burgers", {
+          burgerList: dbBurgers
+        });
         res.json(dbBurgers);
       })
   }
 }
-
-  
- 
-
-  

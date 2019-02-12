@@ -11,7 +11,7 @@ module.exports = {
           return res
             .status(500)
             .json(err);
-        }
+        };
         res.json(dbBurgers);
       });
   },
@@ -44,12 +44,12 @@ module.exports = {
           return res
             .status(400)
             .json(err);
-        }
+        };
         // set up home page (root) to load up handlebars template with burger list
-        dbBurgers.devoured = true;
-        res.render("burgers", {
-          burgerList: dbBurgers
-        });
+        // dbBurgers.devoured = true;
+        // res.render("burgers", {
+        //   burgerList: dbBurgers
+        // });
         res.json(dbBurgers);
       })
   },

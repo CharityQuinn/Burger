@@ -6,3 +6,4 @@ I am very thankful for the learning I have accomplished during the work on this 
 
 I have include a few screen shots of the site below:
 [Link to front page, no bkend]href="./public/assets/img/Doc1.docx"
+[Link to front page]https://i.gyazo.com/7d15f135e279c4ddc5c3cf5cc4b57341.png

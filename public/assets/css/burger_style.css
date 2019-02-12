@@ -1,4 +1,5 @@
 
+
   h1 {
     display: table-cell;
     text-align: center; 
@@ -32,8 +33,7 @@
     height: 80%;
     width: 100%;
     top: 673px;
-    /* left: 673px; */
-    /* z-index: -1; */
+    scroll-behavior: auto;
   }
   
   #label {

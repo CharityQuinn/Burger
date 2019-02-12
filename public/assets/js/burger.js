@@ -29,22 +29,20 @@ $("#mark-eaten").on("click", function() {
   const eatBurger = $(this).attr("data-id");
   console.log("This is the id to be eaten " + eatBurger);
   $.ajax({
-    url: "/api/burgers",
-    data: eatBurger,
+    url: "/api/burgers/" + eatBurger,
     method: "PUT",
   }).then(function(data) {
     location.reload();
   });
 });
 
-$("#delete").on("click", function() {
+$(document).on("click", "#delete", function() {
   console.log("The delete burger button was pushed");
   // read id from button
   const delBurger = $(this).attr("data-id");
   console.log("This is burger to be deleted " + delBurger)
   $.ajax({
-    url: "/api/burgers/",
-    data: delBurger,
+    url: "/api/burgers/" + delBurger,
     method: "DELETE"
   }).then(function (data) {
     location.reload();

@@ -7,8 +7,8 @@
       {{#unless this.devoured}}
       <h5>{{this.burger_name}}</h5>
       <div>
-        <button data-id="{{this.id}}" id="mark-eaten"><i class="fas fa-hamburger"></i>Yum! Eat this!</button>
-        <button data-id="{{this.id}}" id="delete"><i class="fas fa-trash-alt"></i>Trash this! </button>
+        <button data-id={{this.id}} id="mark-eaten"><i class="fas fa-hamburger"></i>Yum! Eat this!</button>
+        <button data-id={{this.id}} id="delete"><i class="fas fa-trash-alt"></i>Trash this! </button>
       </div>
       {{/unless}}
       {{/each}}
@@ -30,7 +30,7 @@
       {{#if this.devoured}}
       <h5>{{this.burger_name}}</h5>
       <div>
-        <button data-id="{{this.id}}" id="delete"><i class="fas fa-trash-alt"></i>Trash this! </button>
+        <button data-id={{this.id}} id="delete"><i class="fas fa-trash-alt"></i>Trash this! </button>
       </div>
       {{/if}}
       {{/each}}

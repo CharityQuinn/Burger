@@ -15,5 +15,6 @@ router
 router
   .route("/:id")
   .put(burgersController.updateOne)
+  .delete(burgersController.deleteBurger)
 
 module.exports = router;

@@ -43,3 +43,19 @@
     color: rgb(16, 106, 240);
     font-style: bold;
     }
+
+    #mark-eaten {
+      font-size: 10px;
+      border-radius: 8px;
+      background-color:  rgb(16, 106, 240);
+      color: white;
+      padding: 5px 24px;      
+    }
+
+    #delete {
+      font-size: 10px;
+      border-radius: 8px;
+      background-color:  rgb(240, 16, 16);
+      color: white;
+      padding: 5px 24px;  
+    }

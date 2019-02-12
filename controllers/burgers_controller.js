@@ -26,29 +26,19 @@ module.exports = {
             .status(400)
             .json(err);
         }
-        let burgerName = dbBurgers.burger_name;
-        console.log("This is the burger name going into the db " + burgerName);
+
         let burger = req.body.burger_name;
-        console.log(burger);
+        console.log("This is the burger name going into the db " + burger);
         res.json(dbBurgers);
       });
   },
-  // router.post("/api/burger", function (request, response) {
-  //   burger.create({
-  //     burger_name: request.body.burgerName,
-  //     devoured: (request.body.devoured) ? eval(request.body.devoured) : false
-  //   }, function (result) {
-  //     response.json({
-  //       id: result.insertId
-  //     });
-  //   });
-  // }),
+  
   // UPDATE/PUT a burger to mark it from ready to eat to devoured (false => true),
   // this will use req.params.id to know where they're updating
   updateOne: function (req, res) {
-
+    let squeryString = "UPDATE burgers SET devoured = true WHERE id = ?";
     db
-      .query("UPDATE burgers SET devoured = true WHERE id = ?", [req.params.id], function (err, dbBurgers) {
+      .query(squeryString, [req.params.id], function (err, dbBurgers) {
         if (err) {
           console.log(err);
           return res
@@ -62,5 +52,20 @@ module.exports = {
         });
         res.json(dbBurgers);
       })
-  }
-}
+  },
+
+   //  delete a burger based on id from req.params.id
+   deleteBurger: function(req, res) {
+    let queryString =
+      "DELETE FROM burgers WHERE id = ?";
+      db
+      .query(queryString, [req.params.id], function(err, result) {
+        if (err) {
+          console.log(err);
+          return res.status(400).json(err);
+        }
+        console.log("Deleting a burger from db at " + req.params.id)
+        res.json(result);
+      });
+  },
+};

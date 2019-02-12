@@ -22,15 +22,34 @@ $(document).ready(function() {
   });
 });
 
-$(".ate").on("click", function() {
+$("#mark-eaten").on("click", function() {
+  console.log("The eat burger button was pushed");
   // change burger from not devoured to devoured
   // read id from button
-  const burger = $(this).attr("id");
+  const eatBurger = $(this).attr("data-id");
+  console.log("This is the id to be eaten " + eatBurger);
   $.ajax({
-    url: "/api/burgers" + id,
+    url: "/api/burgers",
+    data: eatBurger,
     method: "PUT",
   }).then(function(data) {
     location.reload();
   });
 });
+
+$("#delete").on("click", function() {
+  console.log("The delete burger button was pushed");
+  // read id from button
+  const delBurger = $(this).attr("data-id");
+  console.log("This is burger to be deleted " + delBurger)
+  $.ajax({
+    url: "/api/burgers/",
+    data: delBurger,
+    method: "DELETE"
+  }).then(function (data) {
+    location.reload();
+  });
+
+}) 
+
 

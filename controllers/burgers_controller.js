@@ -28,7 +28,7 @@ module.exports = {
         }
         let burgerName = dbBurgers.burger_name;
         console.log("This is the burger name going into the db " + burgerName);
-        let burger = request.body.burger_name;
+        let burger = req.body.burger_name;
         console.log(burger);
         res.json(dbBurgers);
       });

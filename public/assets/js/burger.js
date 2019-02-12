@@ -7,7 +7,7 @@ $(document).ready(function() {
   
     //package up the burger type
     const burgerItem = {
-      burgers: $("#burger-input").val().trim()
+      burger_name: $("#burger-input").val().trim()
     }
     console.log("This is burgerItem " + burgerItem);
     // post this burger to db

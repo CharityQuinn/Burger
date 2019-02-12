@@ -15,5 +15,4 @@
     "express-handlebars": "^3.0.0",
     "mysql": "^2.16.0"
   }
-  }
-
+}

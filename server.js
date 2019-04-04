@@ -18,7 +18,7 @@ app.use(express.static("public"));
 //Import routes and give the server access to them
 app.use(routes);
 
-var PORT = process.env.PORT || 3000;
+
 
 // establish access to the routes files 
 app.use('/', routes);

@@ -1,4 +1,4 @@
-CREATE DATABASE burgers_db;
+CREATE DATABASE burger_db;
 
 USE burgers_db;
 
